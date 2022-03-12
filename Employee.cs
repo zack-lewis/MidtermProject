@@ -21,13 +21,16 @@ namespace MidtermProject {
         private EmployeeType empType;
 
         public Employee(string firstName, string lastName, string id, EmployeeType empType) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.id = id;
-            this.empType = empType;
+            setFirstName(firstName);
+            setLastName(lastName);
+            setEmpType(empType);
+            setID(id);
         }
 
         public void setFirstName(string input) {
+            if(input == null || input == "") {
+                throw new System.ArgumentException("First name cannot be empty");
+            }
             this.firstName = input;
         }
 
@@ -36,11 +39,22 @@ namespace MidtermProject {
         }
 
         public void setLastName(string input) {
+            if(input == null || input == "") {
+                throw new System.ArgumentException("Last name cannot be empty");
+            }
             this.lastName = input;
         }
 
         public string getlastName() {
             return this.lastName;
+        }
+
+        private void setID(string input) {
+            if(input == null || input == "") {
+                throw new System.ArgumentException("ID cannot be empty");
+            }
+
+            this.id = input;
         }
 
         public string getID() {

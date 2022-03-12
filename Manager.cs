@@ -14,8 +14,8 @@ namespace MidtermProject {
         private string region;
 
         public Manager(string firstName, string lastName, string id, string department, string region) : base(firstName, lastName, id, EmployeeType.Manager) {
-            this.department = department;
-            this.region = region;
+            setDepartment(department);
+            setRegion(region);
         }
 
         public string getRegion() {
@@ -23,6 +23,10 @@ namespace MidtermProject {
         }
 
         public void setRegion(string input) {
+            if(input == null || input == "") {
+                throw new System.ArgumentException("Region cannot be empty");
+            }
+
             this.region = input;
         }
 
@@ -31,6 +35,10 @@ namespace MidtermProject {
         }
 
         public void setDepartment(string input) {
+            if(input == null || input == "") {
+                throw new System.ArgumentException("Department cannot be empty");
+            }
+
             this.department = input;
         }
     }

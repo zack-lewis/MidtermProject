@@ -9,5 +9,30 @@ namespace MidtermProject {
     //     A method that gets the manager's region.
     //     A method that sets the manager's region.
 
+    class Manager : Employee{
+        private string department; 
+        private string region;
+
+        public Manager(string firstName, string lastName, string id, string department, string region) : base(firstName, lastName, id, EmployeeType.Manager) {
+            this.department = department;
+            this.region = region;
+        }
+
+        public string getRegion() {
+            return this.region;
+        }
+
+        public void setRegion(string input) {
+            this.region = input;
+        }
+
+        public string getDepartment() {
+            return this.department;
+        }
+
+        public void setDepartment(string input) {
+            this.department = input;
+        }
+    }
 
 }

@@ -39,7 +39,7 @@ namespace MidtermProject {
             this.lastName = input;
         }
 
-        public string getLastName() {
+        public string getlastName() {
             return this.lastName;
         }
 

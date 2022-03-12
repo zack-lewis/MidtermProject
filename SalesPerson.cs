@@ -10,7 +10,7 @@ namespace MidtermProject{
         private string department;
         private float sales = 0;
 
-        public SalesPerson(string firstName, string lastName, string id, string department, float sales) : base(firstName, lastName, id, EmployeeType.SalesPerson) {
+        public SalesPerson(string firstName, string lastName, string id, string department, float sales) : base(firstName, lastName, id, EmployeeType.Sales) {
             this.sales = sales;
         }
 

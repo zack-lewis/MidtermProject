@@ -1,5 +1,5 @@
 namespace MidtermProject {
     public enum EmployeeType{
-        SalesPerson, Manager, Production
+        Sales, Manager, Production
     };
 }
